@@ -172,9 +172,7 @@ app.post("/users", (request: Request, response: Response) => {
       return f.userId === userId; });
 
 
-
-
-
+      
       // NAO CONSEGUI BUSCAR O INDICE DA TRANSACTION DE NENHUMA FORMA
       // ESTÁ RETORNANDO -1 EM AMBAS TENTATIVAS
       const indexTransaction = user.transactions.findIndex((f:any) => {
