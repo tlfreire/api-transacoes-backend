@@ -2,7 +2,7 @@
   "name": "exercicio2api",
   "version": "1.0.0",
   "engines": {
-    "node": "14.x"
+    "node": "10.19.0"
   },
   "main": "index.js",
   "license": "MIT",
