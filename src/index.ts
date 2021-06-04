@@ -72,6 +72,14 @@ app.post("/users", (request: Request, response: Response) => {
     })
   })
 
+  app.get("/users/:userId", (request: Request, response: Response) => {
+    const { userId }: { userId?: string } = request.params;
+    const user = users.find((f) => {
+      return f.userId === userId;
+    });
+    return response.status(200).json(user);
+  });
+
   app.delete("/users/:userId", (request: Request, response: Response) => {
     const { userId }: { userId?: string } = request.params;
 
@@ -89,7 +97,7 @@ app.post("/users", (request: Request, response: Response) => {
     return response.status(200).json(user);
   });
 
-  app.put("/users/:id", (request: Request, response: Response) => {
+  app.put("/users/:userId", (request: Request, response: Response) => {
     const { userId }: { userId?: string } = request.params;
     const { name, cpf, email, age }: { name: string; cpf: string; email: string, age: string } = request.body;
   
